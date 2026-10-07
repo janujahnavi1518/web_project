@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roll a Dice</title>
+
+    <style>
+        body {
+            background-color:purple;
+            background-image: url(https://images.stockcake.com/public/3/0/9/30914078-a75e-4741-8dee-76bc157f6583_large/dice-in-motion-stockcake.jpg);
+            background-repeat:no-repeat;
+
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+            color:greenyellow;
+        } 
+
+        #dice {
+            font-size: 100px;
+            margin: 30px;
+            color:blueviolet;
+        }
+
+        button {
+            background-color: aqua;
+            padding: 12px 25px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>🎲 Roll a Dice</h1>
+
+    <div id="dice">⚀</div>
+
+    <button onclick="rollDice()">Roll Dice</button>
+
+    <p id="result">click the button to roll the dice.</p>
+    <image="https://www.istockphoto.com/photos/dice"></image>
+    
+
+    <script>
+        function rollDice() {
+            let number = Math.floor(Math.random() * 6) + 1;
+
+            let diceFaces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+            document.getElementById("dice").innerHTML = diceFaces[number - 1];
+        }
+    </script>
+
+</body>
+</html>
